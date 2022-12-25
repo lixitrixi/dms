@@ -44,11 +44,13 @@ router.post('/', (req, res) => {
 
     users.add(usr.name, {
         name: usr.name,
-        publickey: usrs.publickey,
+        publickey: usr.publickey,
         secret: usr.secret,
         hash2: usr.hash2,
         salt: usr.salt
     });
+
+    res.status(200).send("User successfully registered!")
 });
 
 module.exports = router;

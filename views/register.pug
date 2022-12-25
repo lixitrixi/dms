@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    link(rel="stylesheet", href="css/register.css")
+
+    main
+        .form-container
+            form(action="/" onSubmit="return registerme()")
+                label(for="username")
+                input(type="text" id="username" name="username" autocomplete="username") 
