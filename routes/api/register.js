@@ -1,8 +1,6 @@
-const express = require('express');
-const crypto = require('crypto');
-const users = require('../util/users');
+const users = require('../../util/users');
 
-const router = express.Router()
+const router = require('express').Router();
 
 const REQUIRED = new Set(
     ['name', 'publickey', 'secret', 'hash2', 'salt']
@@ -32,10 +30,11 @@ router.post('/', (req, res) => {
 
     console.log("new user");
     console.log(usr);
-    
+
     let err = validate(usr);
     if (err) {
         res.status(400).send(err);
+        return;
     }
 
     if (users.exists(usr.name)) {

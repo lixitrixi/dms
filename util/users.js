@@ -10,7 +10,7 @@ const db = JSON.parse(
 function save() {
     fs.writeFileSync(
         'data/users.json',
-        JSON.stringify(db)
+        JSON.stringify(db, undefined, 4)
     );
 }
 
