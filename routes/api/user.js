@@ -1,4 +1,4 @@
-const users = require('../../util/users');
+const users = require('../../modules/users');
 
 const router = require('express').Router();
 

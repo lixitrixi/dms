@@ -15,3 +15,7 @@ function generateKeys() {
         }
     });
 }
+
+function registerme() {
+    alert("Register me!")
+}
