@@ -1,2 +1,2 @@
 # dms
- An end-to-end encrypted direct messaging web app!
+ An end-to-end encrypted direct messaging web app using NodeJS!
