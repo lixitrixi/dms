@@ -10,7 +10,7 @@ app.use('/api',
     require('./routes/api')
 );
 
-app.set('views', './views');
+app.set('views', './view');
 app.set('view engine', 'pug');
 
 app.use(express.json());

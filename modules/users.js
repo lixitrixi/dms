@@ -39,8 +39,8 @@ function exists(username) {
  * @param {*} the user's registration data
  */
 function add(username, body) {
-    db[username] = body;
+    db[username] = db[username] || body; // set only if undefined
     save();
 }
 
-module.exports = {save, get, add, exists};
+module.exports = {save, get, exists, add};

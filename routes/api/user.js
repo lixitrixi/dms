@@ -1,5 +1,4 @@
 const users = require('../../modules/users');
-
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
@@ -7,7 +6,7 @@ router.get('/', (req, res) => {
     let usr = users.get(name);
 
     if (!usr) {
-        res.status(404).send("User not registered!");
+        res.status(404).send("User not registered");
     }
 
     res.json(usr);

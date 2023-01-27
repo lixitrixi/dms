@@ -1,11 +1,25 @@
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.1s ease;
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat';
     background-color: var(--color-bg);
+    color: var(--color-font);
+}
 
-    --color-bg: #222;
+body {
+    --color-bg: #fff;
+    --color-font: #111;
+    --color-accent: #eee;
+    --color-accent-hover: #e2e2e2;
+}
+
+body.dark {
+    --color-bg: #111;
+    --color-font: #fff;
+    --color-accent: #222;
+    --color-accent-hover: #2e2e2e;
 }

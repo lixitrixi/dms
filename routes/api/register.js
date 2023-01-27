@@ -1,9 +1,8 @@
 const users = require('../../modules/users');
-
 const router = require('express').Router();
 
 const REQUIRED = new Set(
-    ['name', 'publickey', 'secret', 'hash2', 'salt']
+    ['name', 'pubkey', 'secret', 'pwdhash', 'salt']
 );
 
 /**
@@ -28,9 +27,6 @@ function validate(usr) {
 router.post('/', (req, res) => {
     let usr = req.body;
 
-    console.log("new user");
-    console.log(usr);
-
     let err = validate(usr);
     if (err) {
         res.status(400).send(err);
@@ -44,13 +40,13 @@ router.post('/', (req, res) => {
 
     users.add(usr.name, {
         name: usr.name,
-        publickey: usr.publickey,
+        pubkey: usr.pubkey,
         secret: usr.secret,
-        hash2: usr.hash2,
-        salt: usr.salt
+        hash2: usr.hash2
     });
 
-    res.status(200).send("User successfully registered!")
+    res.status(200).send("User successfully registered!");
+    console.log("new user: " + usr.name);
 });
 
 module.exports = router;

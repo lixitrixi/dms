@@ -1,0 +1,14 @@
+extends layout
+
+block meta
+    title Register
+    link(rel="stylesheet", href="css/register.css")
+
+block content
+    .form-container
+        form#form(action='javascript:register()')
+            input.register-field(type="text" id="username" name="username" autocomplete="username" placeholder="Username")
+            input.register-field(type="password" id="password" name="password" autocomplete="password" placeholder="Password")
+            input#submit(type="button" value="Sign up!")
+
+    script(src="js/register.js")

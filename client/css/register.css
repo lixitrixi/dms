@@ -1,10 +1,33 @@
-main {
+.form-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
-.form-container {
+main #form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    gap: 16px;
+}
+
+.register-field {
+    background-color: var(--color-accent);
+    color: inherit;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+#submit {
+    padding: 10px 20px;
+    margin: 0 auto;
+    border: none;
+    background-color: var(--color-accent);
+    border-radius: 6px;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: var(--color-accent-hover);
 }
